@@ -1,7 +1,8 @@
 .recommendedVideos {
-  flex: 0.8;
+  width: 80%;
   background: #f9f9f9;
   padding: 40px 20px 0 20px;
+  min-height: 100%;
 }
 
 .recommendedVideos > h2 {
