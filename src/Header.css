@@ -30,12 +30,17 @@
   padding: 0 8px;
 }
 
+.header__linkButton {
+  height: 24px;
+}
+
 .header__inputButton {
   width: 50px !important;
   background: #fafafa;
   border-left: 1px solid lightgray;
   border-radius: 0 4px 4px 0;
-  color: gray;
+  color: gray !important;
+  height: 24px !important;
 }
 
 .header__inputButton:hover {
