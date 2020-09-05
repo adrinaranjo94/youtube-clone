@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
-import { Header } from "./Header";
-import { Sidebar } from "./Sidebar";
-import { RecommendedVideos } from "./RecommendedVideos";
+import { Header } from "components/Header";
+import { Sidebar } from "components/Sidebar";
+import { RecommendedVideos } from "pages/RecommendedVideos";
 import { Switch, Route } from "react-router-dom";
-import { SearchPage } from "./SearchPage";
+import { SearchPage } from "pages/SearchPage";
 
 function App() {
   return (
