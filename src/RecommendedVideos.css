@@ -7,3 +7,8 @@
 .recommendedVideos > h2 {
   margin: 0 0 20px 5px;
 }
+
+.recommendedVideos__videos {
+  display: flex;
+  flex-flow: row wrap;
+}
