@@ -1,6 +1,8 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
 
+import "./VideoCard.css";
+
 export const VideoCard = ({
   image,
   title,
@@ -11,20 +13,21 @@ export const VideoCard = ({
 }) => {
   return (
     <div className="videoCard">
-      <img src={image} alt="" />
+      <img src={image} alt="" className="videoCard__thumbnail" />
       <div className="videoCard__info">
         <Avatar
           className="videoCard__avatar"
           alt={channel}
           src={channelImage}
         />
-      </div>
-      <div className="videoCard__text">
-        <h4>{title}</h4>
-        <p>{channel}</p>
-        <p>
-          {views} • {timestamp}
-        </p>
+
+        <div className="videoCard__text">
+          <h4>{title}</h4>
+          <p>{channel}</p>
+          <p>
+            {views} • {timestamp}
+          </p>
+        </div>
       </div>
     </div>
   );
