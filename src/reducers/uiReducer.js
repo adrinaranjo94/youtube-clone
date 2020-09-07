@@ -1,6 +1,13 @@
 import { types } from "types/types";
 
-export const uiReducer = (state = {}, action) => {
+const initialState = {
+  menuSidebarCollapse: localStorage.getItem("menuSidebarCollapse")
+    ? localStorage.getItem("menuSidebarCollapse") === "true"
+      ? true
+      : false
+    : false,
+};
+export const uiReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.toggleMenuSidebar:
       return {

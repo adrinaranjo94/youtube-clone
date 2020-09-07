@@ -6,8 +6,9 @@
 .page__content {
   width: 80%;
   background: #f9f9f9;
+  transition: width 0.3s;
 }
 
-.collapse {
+.page__collapse {
   width: calc(100% - 40px) !important;
 }

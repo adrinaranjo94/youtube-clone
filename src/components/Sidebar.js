@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 import { SidebarRow } from "./SidebarRow";
 import HomeIcon from "@material-ui/icons/Home";
@@ -10,10 +10,15 @@ import OndemandVideoIcon from "@material-ui/icons/OndemandVideo";
 import WatchLaterIcon from "@material-ui/icons/WatchLater";
 import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
 import ExpandMoreOutlinedIcon from "@material-ui/icons/ExpandMoreOutlined";
+import { useSelector } from "react-redux";
 
 export const Sidebar = () => {
+  const { menuSidebarCollapse } = useSelector((state) => state.ui);
+
   return (
-    <div className="sidebar">
+    <div
+      className={`sidebar ${menuSidebarCollapse ? "sidebar__collapse" : ""}`}
+    >
       <SidebarRow selected title="Home" Icon={HomeIcon} />
       <SidebarRow title="Trending" Icon={WhatshotIcon} />
       <SidebarRow title="Subscriptions" Icon={SubscriptionsIcon} />

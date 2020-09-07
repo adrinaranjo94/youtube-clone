@@ -7,13 +7,20 @@ import AppsIcon from "@material-ui/icons/Apps";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import { Avatar } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { toggleMenuSidebar } from "actions/ui";
 
 export const Header = () => {
+  const dispatch = useDispatch();
   const [inputSearch, setInputSearch] = useState("");
   return (
     <div className="header">
       <div className="header__left">
-        <MenuIcon />
+        <MenuIcon
+          onClick={() => {
+            dispatch(toggleMenuSidebar());
+          }}
+        />
         <Link
           to="/"
           onClick={() => {

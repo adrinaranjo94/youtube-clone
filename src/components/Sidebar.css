@@ -5,6 +5,7 @@
   top: 80px;
   height: 100%;
 
+  transition: width 0.3s;
   overflow: auto;
 }
 
@@ -15,6 +16,10 @@
   margin: 10px 0;
 }
 
-.collapse {
-  width: 40px;
+.sidebar__collapse {
+  width: 60px !important;
+}
+
+.sidebar__collapse > .sidebarRow > .sidebarRow__title {
+  display: none;
 }
