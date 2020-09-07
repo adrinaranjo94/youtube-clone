@@ -5,6 +5,7 @@
   top: 80px;
   height: 100%;
 
+  transition: width 0.3s;
   overflow: auto;
 }
 
@@ -13,4 +14,12 @@
   border: 0;
   background: lightgray;
   margin: 10px 0;
+}
+
+.sidebar__collapse {
+  width: 60px !important;
+}
+
+.sidebar__collapse > .sidebarRow > .sidebarRow__title {
+  display: none;
 }
